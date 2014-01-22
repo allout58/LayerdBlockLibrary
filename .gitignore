@@ -4,3 +4,16 @@
 *.jar
 *.war
 *.ear
+
+includeCP/fmlbranding.properties
+eclipse/*
+build/*
+bin/*
+.gradle/*
+.settings/*
+.project
+.classpath
+*-fml.txt
+MinecraftForge-*.txt
+forge-*-changelog.txt
+gradle-app.setting
