@@ -1,29 +1,30 @@
-package allout58.libs.LayedTextureBlock.block;
+package allout58.libs.LayeredTextureBlock.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
-import allout58.libs.LayedTextureBlock.client.ClientProxy;
+import allout58.libs.LayeredTextureBlock.client.BlankIcon;
+import allout58.libs.LayeredTextureBlock.client.ClientProxy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class BlockLayeredTexture extends Block
 {
     public Icon blank;
-    
+
     public BlockLayeredTexture(int par1, Material par2Material)
     {
         super(par1, par2Material);
     }
-    
+
     @Override
     public boolean renderAsNormalBlock()
     {
         return false;
     }
-    
+
     @Override
     public int getRenderType()
     {
@@ -33,32 +34,33 @@ public abstract class BlockLayeredTexture extends Block
     @Override
     public boolean canRenderInPass(int pass)
     {
-        ClientProxy.renderPass=pass;
+        ClientProxy.renderPass = pass;
         return true;
     }
-    
+
     @Override
     public int getRenderBlockPass()
     {
         return 1;
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister ir)
     {
-        this.blank=ir.registerIcon("LayeredTextureBlockLib:blank");
+        this.blank = new BlankIcon();
     }
-    
+
     @Override
     public Icon getBlockTexture(IBlockAccess world, int x, int y, int z, int side)
     {
-        return this.getBlockTextureByPass(world, x, y, z, side,ClientProxy.renderPass);
+        return this.getBlockTextureByPass(world, x, y, z, side, ClientProxy.renderPass);
     }
-    
+
     /**
-     * Gets the texture for a side for a render pass
-     * Override in subclasses to actually 
+     * Gets the texture for a side for a render pass Override in subclasses to
+     * actually
+     * 
      * @param world
      * @param x
      * @param y

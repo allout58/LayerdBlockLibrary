@@ -1,4 +1,3 @@
-Initial Commit
+True blank icon
 
-Pull from my PrisonCraft project
-This is my first library, so sorry if it takes a bit to get it polished...
+Created fake Icon class for blank rather than .png file. Simpler, and actually works. ;)

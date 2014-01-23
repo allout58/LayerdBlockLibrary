@@ -1,4 +1,4 @@
-package allout58.libs.LayedTextureBlock.client;
+package allout58.libs.LayeredTextureBlock.client;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 

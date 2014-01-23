@@ -1,4 +1,4 @@
-package allout58.libs.LayedTextureBlock.client;
+package allout58.libs.LayeredTextureBlock.client;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
