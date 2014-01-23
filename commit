@@ -1,3 +1,6 @@
-True blank icon
+Now with compact mode!
 
-Created fake Icon class for blank rather than .png file. Simpler, and actually works. ;)
+Reduced it to one class :D
+The BlockLayeredTexture class overrides appropriate methods and provides a Blank icon and a renderPass integer for the current render pass.
+
+Need extensive testing and feedback from other modders before going very public..
