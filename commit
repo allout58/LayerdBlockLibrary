@@ -1,6 +1,1 @@
-Now with compact mode!
-
-Reduced it to one class :D
-The BlockLayeredTexture class overrides appropriate methods and provides a Blank icon and a renderPass integer for the current render pass.
-
-Need extensive testing and feedback from other modders before going very public..
+Some trial stuff. Ended up going back to empty icon.
